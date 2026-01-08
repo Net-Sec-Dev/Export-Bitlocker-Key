@@ -26,11 +26,12 @@ Script name and version (Written into the exported recovery file for logging): $
 
 ## Output Filename Format
 
-<HOSTNAME>, <GUI-Identifier>, <YYYY-MM-DD>.txt
+Recovery files are output in this format:
 
-Example:
+    <HOSTNAME>, <GUI-Identifier>, <YYYY-MM-DD>.txt
+For example:
 
-DESKTOP-1234, {A1B2C3D4-E5F6-7890-ABCD-1234567890AB}, 2026-01-08.txt
+    DESKTOP-1234, {A1B2C3D4-E5F6-7890-ABCD-1234567890AB}, 2026-01-08.txt
 
 ## Exit Codes
 
