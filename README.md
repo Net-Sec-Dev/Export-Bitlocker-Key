@@ -3,8 +3,7 @@
 A simple, automated PowerShell script to **export an existing BitLocker recovery key** from a Windows system using `manage-bde`. Designed for use with Ansible and PDQ deploy. 
 This script saves the recovery key to a centralized network location using a consistent, human-readable filename format.
 
-> **This script does not enable BitLocker.**  
-> It assumes BitLocker is already enabled on the target drive.
+Please note: **this script does not enable BitLocker.** It assumes BitLocker is already enabled on the target drive, and extracts the recovery key.
 
 ## Overview
 
