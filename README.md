@@ -6,8 +6,6 @@ This script saves the recovery key to a centralized network location using a con
 > **This script does not enable BitLocker.**  
 > It assumes BitLocker is already enabled on the target drive.
 
----
-
 ## Overview
 
 This script will:
@@ -20,8 +18,6 @@ This script will:
 - Export the recovery key and metadata to a **network location**
 - Name the output file in a standardized, human-readable format
 - Return deterministic **exit codes** for automation tools such as **PDQ Deploy**
-
----
 
 ## Configuration
 
@@ -39,8 +35,6 @@ Script name and version
 
     $Version = "Save BitLocker Key to NTSTORE v2.1 PDQ"
 
----
-
 ## Output Filename Format
 
     <HOSTNAME>, <GUI-Identifier>, <YYYY-MM-DD>.txt
@@ -48,8 +42,6 @@ Script name and version
 Example:
 
     DESKTOP-1234, {A1B2C3D4-E5F6-7890-ABCD-1234567890AB}, 2026-01-08.txt
-
----
 
 ## Exit Codes
 
@@ -62,8 +54,6 @@ Example:
 | 77 | Export path does not exist or is unreachable |
 | 88 | BitLocker is not enabled on the target drive |
 | 99 | Unable to retrieve BitLocker volume information |
-
----
 
 ## How It Works
 
@@ -82,11 +72,11 @@ Example:
      │       └─> Exit 66 on failure
      │
      │ Parse manage-bde output
-     │       ├─ Extract recovery password
-     │       ├─ Extract protector GUID
-     │       └─ Extract GUI Numerical Password identifier
-     │             └─ Fallback to protector GUID if GUI ID not found
-     │             └─ Exit 55 if parsing fails
+     │       ├─> Extract recovery password
+     │       ├─> Extract protector GUID
+     │       └─> Extract GUI Numerical Password identifier
+     │             └─> Fallback to protector GUID if GUI ID not found
+     │             └─> Exit 55 if parsing fails
      │
      │ Build filename using hostname, identifier, and date
      │
