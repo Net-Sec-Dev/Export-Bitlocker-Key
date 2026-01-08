@@ -20,27 +20,17 @@ This script will:
 
 ## Configuration
 
-Drive to export recovery key from:
-
-    $MountPoint = "C:"
-
-Network path to store recovery key files  
-(Must be accessible and writable by the executing account):
-
-    $ExportPath = "\\ntstore\Apps\Keys"
-
-Script name and version  
-(Written into the exported recovery key file):
-
-    $Version = "Save BitLocker Key to NTSTORE v2.1 PDQ"
+Drive to export recovery key from: $MountPoint = "C:"
+Network path to store recovery key files: $ExportPath = "\\ntstore\Apps\Keys"
+Script name and version (Written into the exported recovery file for logging): $Version = "Save BitLocker Key to NTSTORE v2.1 PDQ"
 
 ## Output Filename Format
 
-    <HOSTNAME>, <GUI-Identifier>, <YYYY-MM-DD>.txt
+<HOSTNAME>, <GUI-Identifier>, <YYYY-MM-DD>.txt
 
 Example:
 
-    DESKTOP-1234, {A1B2C3D4-E5F6-7890-ABCD-1234567890AB}, 2026-01-08.txt
+DESKTOP-1234, {A1B2C3D4-E5F6-7890-ABCD-1234567890AB}, 2026-01-08.txt
 
 ## Exit Codes
 
