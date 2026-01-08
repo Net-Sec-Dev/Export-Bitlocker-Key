@@ -84,13 +84,3 @@ Example:
      │       └─> Exit 44 on failure
      │
     End ──> Exit 0 (Success)
-
----
-
-## Notes
-
-- Uses **manage-bde** for maximum compatibility with native Windows BitLocker tooling
-- Prioritizes the **GUI-visible Numerical Password ID** so exported keys match what helpdesk staff see in the BitLocker UI
-- Falls back safely to the **protector GUID** when the GUI identifier cannot be located
-- Writes output using **ASCII encoding** for broad compatibility with indexing and archival systems
-- Safe for **mass deployment** across enterprise environments using PDQ Deploy or similar tools
