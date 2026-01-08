@@ -10,13 +10,10 @@ Please note: **this script does not enable BitLocker.** It assumes BitLocker is 
 This script will:
 - Verify **BitLocker is enabled** on a specified drive (default `C:`)
 - Query BitLocker protector information using **manage-bde**
-- Extract the **recovery password**
-- Extract the **protector GUID**
-- Extract the **GUI-visible Numerical Password identifier** (when available)
+- Extract the **recovery password**, **protector GUID**, and **GUI-visible Numerical Password identifier** (when available)
 - Fall back to the protector GUID if the GUI identifier cannot be located
 - Export the recovery key and metadata to a **network location**
 - Name the output file in a standardized, human-readable format
-- Return deterministic **exit codes** for automation tools such as **PDQ Deploy**
 
 ## Configuration
 
